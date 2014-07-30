@@ -485,12 +485,35 @@ make mlton
 <p>This creates a a hidden file called <code>.smlnj-pathconfig</code> under your home directory and sends the output of <code>echo</code> to it. Bash expands <code>$HOME</code> to the path to your home directory before redirecting the output to the file.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_mlton">MLton</h3>
+<div class="paragraph">
+<p>MLton doesn&#8217;t have user-specific path maps, so we&#8217;ll edit the system-wide path map file. Since it&#8217;s located in a write-protected folder, we&#8217;ll need to use <code>sudo</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code class="bash language-bash">sudo nano /usr/lib/mlton/mlb-path-map
+</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Enter your password when prompted. The file should now open in the <em>nano</em> text editor. Assuming your user is called <strong>aio</strong>, add the following line at the end of the file:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>SMACKAGE /home/aio/.smackage/lib</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now save the file by typing <code>CTRL-O</code> and close <em>nano</em> by typing <code>CTRL-X</code>.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-07-29 21:33:00 EDT
+Last updated 2014-07-29 21:44:37 EDT
 </div>
 </div>
 </body>

@@ -37,3 +37,20 @@ echo "SMACKAGE $HOME/.smackage/lib" > ~/.smlnj-pathconfig
 ----
 
 This creates a a hidden file called +.smlnj-pathconfig+ under your home directory and sends the output of +echo+ to it. Bash expands +$HOME+ to the path to your home directory before redirecting the output to the file.
+
+=== MLton
+
+MLton doesn't have user-specific path maps, so we'll edit the system-wide path map file. Since it's located in a write-protected folder, we'll need to use +sudo+:
+
+[source, bash]
+----
+sudo nano /usr/lib/mlton/mlb-path-map
+----
+
+Enter your password when prompted. The file should now open in the _nano_ text editor. Assuming your user is called *aio*, add the following line at the end of the file:
+
+....
+SMACKAGE /home/aio/.smackage/lib
+....
+
+Now save the file by typing +CTRL-O+ and close _nano_ by typing +CTRL-X+.
