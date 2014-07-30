@@ -1,0 +1,24 @@
+= Setting up Smackage
+:source-highlighter: pygments
+
+Setting up Smackage is relatively straightforward. Launch a terminal emulator and follow along.
+
+== Compiling Smackage
+
+First, we'll clone the Smackage repository into a temporary directory.
+
+[source, bash]
+----
+cd /tmp
+git clone git://github.com/standardml/smackage.git 
+----
+
+Now we'll compile Smackage using MLton.
+
+[source, bash]
+----
+cd smackage
+make mlton
+----
+
+This creates an executable in the +bin+ subdirectory.
