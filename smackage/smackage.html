@@ -432,7 +432,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Setting up Smackage is relatively straightforward. Launch a terminal emulator and follow along.</p>
+<p>Setting up <em>Smackage</em> is relatively straightforward. Launch a terminal emulator and follow along.</p>
 </div>
 </div>
 </div>
@@ -440,7 +440,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <h2 id="_compiling_smackage">Compiling Smackage</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>First, we&#8217;ll clone the Smackage repository into a temporary directory.</p>
+<p>First, we&#8217;ll clone the <em>Smackage</em> repository into a temporary directory.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -510,10 +510,53 @@ make mlton
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_setting_up_your_path">Setting up your PATH</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now we&#8217;ll set up your <code>PATH</code> environment variable so that you can launch any programs installed through <em>Smackage</em> from the command line without typing the full path.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code class="bash language-bash">nano ~/.bashrc
+</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add the following line at the end of the file:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>export PATH=$HOME/.smackage/bin:$PATH</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Do not put spaces around the equality sign. Save and close the file as before.</p>
+</div>
+<div class="paragraph">
+<p>These changes will apply to any new terminal. Let&#8217;s execute the file to apply the changes to the current terminal:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code class="bash language-bash"><span class="tok-nb">source</span> ~/.bashrc
+</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we inspect the value of <code>PATH</code> now, it should contain the <em>Smackage</em> directory:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code class="bash language-bash"><span class="tok-nb">echo</span> <span class="tok-s2">&quot;$PATH&quot;</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-07-29 21:44:37 EDT
+Last updated 2014-07-29 22:10:35 EDT
 </div>
 </div>
 </body>

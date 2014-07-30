@@ -1,11 +1,11 @@
 = Setting up Smackage
 :source-highlighter: pygments
 
-Setting up Smackage is relatively straightforward. Launch a terminal emulator and follow along.
+Setting up _Smackage_ is relatively straightforward. Launch a terminal emulator and follow along.
 
 == Compiling Smackage
 
-First, we'll clone the Smackage repository into a temporary directory.
+First, we'll clone the _Smackage_ repository into a temporary directory.
 
 [source, bash]
 ----
@@ -54,3 +54,33 @@ SMACKAGE /home/aio/.smackage/lib
 ....
 
 Now save the file by typing +CTRL-O+ and close _nano_ by typing +CTRL-X+.
+
+== Setting up your PATH
+
+Now we'll set up your +PATH+ environment variable so that you can launch any programs installed through _Smackage_ from the command line without typing the full path.
+
+[source, bash]
+----
+nano ~/.bashrc
+----
+
+Add the following line at the end of the file:
+....
+export PATH=$HOME/.smackage/bin:$PATH
+....
+
+Do not put spaces around the equality sign. Save and close the file as before.
+
+These changes will apply to any new terminal. Let's execute the file to apply the changes to the current terminal:
+
+[source, bash]
+----
+source ~/.bashrc
+----
+
+If we inspect the value of +PATH+ now, it should contain the _Smackage_ directory:
+
+[source, bash]
+----
+echo "$PATH"
+----
