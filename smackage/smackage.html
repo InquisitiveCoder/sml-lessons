@@ -464,10 +464,33 @@ make mlton
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_setting_up_sml_nj_and_mlton">Setting up SML/NJ and MLton</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Next, we&#8217;ll add the directory where Smackage will put its packages to our compilers' path maps.</p>
+</div>
+<div class="sect2">
+<h3 id="_sml_nj">SML/NJ</h3>
+<div class="paragraph">
+<p>Setting up the path map for SML/NJ is a trivial one-liner:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code class="bash language-bash"><span class="tok-nb">echo</span> <span class="tok-s2">&quot;SMACKAGE $HOME/.smackage/lib&quot;</span> &gt; ~/.smlnj-pathconfig
+</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates a a hidden file called <code>.smlnj-pathconfig</code> under your home directory and sends the output of <code>echo</code> to it. Bash expands <code>$HOME</code> to the path to your home directory before redirecting the output to the file.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-07-29 21:08:40 EDT
+Last updated 2014-07-29 21:33:00 EDT
 </div>
 </div>
 </body>

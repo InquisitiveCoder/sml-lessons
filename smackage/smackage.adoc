@@ -22,3 +22,18 @@ make mlton
 ----
 
 This creates an executable in the +bin+ subdirectory.
+
+== Setting up SML/NJ and MLton
+
+Next, we'll add the directory where Smackage will put its packages to our compilers' path maps.
+
+=== SML/NJ
+
+Setting up the path map for SML/NJ is a trivial one-liner:
+
+[source, bash]
+----
+echo "SMACKAGE $HOME/.smackage/lib" > ~/.smlnj-pathconfig
+----
+
+This creates a a hidden file called +.smlnj-pathconfig+ under your home directory and sends the output of +echo+ to it. Bash expands +$HOME+ to the path to your home directory before redirecting the output to the file.
