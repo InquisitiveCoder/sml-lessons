@@ -553,10 +553,31 @@ make mlton
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_bootstrapping_smackage">Bootstrapping Smackage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With our environment set up, we can now test <em>Smackage</em> by making it download, compile, and install its own source code.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code class="bash language-bash"><span class="tok-nb">cd</span> /tmp/smackage/bin
+./smackage refresh
+./smackage make smackage mlton
+./smackage make smackage install
+which smackage
+</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the output of <code>which</code> is <code>/home/aio/.smackage/bin/smackage</code>, everything worked!</p>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-07-29 22:10:35 EDT
+Last updated 2014-07-29 22:20:22 EDT
 </div>
 </div>
 </body>

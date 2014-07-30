@@ -84,3 +84,18 @@ If we inspect the value of +PATH+ now, it should contain the _Smackage_ director
 ----
 echo "$PATH"
 ----
+
+== Bootstrapping Smackage
+
+With our environment set up, we can now test _Smackage_ by making it download, compile, and install its own source code.
+
+[source, bash]
+----
+cd /tmp/smackage/bin
+./smackage refresh
+./smackage make smackage mlton
+./smackage make smackage install
+which smackage 
+----
+
+If the output of +which+ is +/home/aio/.smackage/bin/smackage+, everything worked!
